@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-// Thread t1: Prints next 10 incremented values
+
 class IncrementThread extends Thread {
     int number;
 
@@ -17,7 +17,7 @@ class IncrementThread extends Thread {
     }
 }
 
-// Thread t2: Prints multiplication table
+
 class MultiplicationThread extends Thread {
     int number;
 
@@ -34,7 +34,7 @@ class MultiplicationThread extends Thread {
     }
 }
 
-// Main class to start both threads
+
 public class Question_20 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -44,11 +44,11 @@ public class Question_20 {
         IncrementThread t1 = new IncrementThread(userNumber);
         MultiplicationThread t2 = new MultiplicationThread(userNumber);
 
-        // Start both threads
+        
         t1.start();
         t2.start();
 
-        // Wait for both threads to finish (optional)
+        
         try {
             t1.join();
             t2.join();
